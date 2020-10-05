@@ -1,4 +1,4 @@
-# Test_Automation
+# FrontEnd_Test_Automation
 
 테스트 자동화에 필요한 샘플코드를 작성해 놓은 곳입니다.
 
