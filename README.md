@@ -19,7 +19,7 @@
 오픈 API를 사용해서 넘어온 response body의 내용을 mongoDB에 저장하는 샘플코드가 작성되어 있습니다.
 
 
-# Newman (Postman) module를 사용한 API 테스트 자동화시 자주 사용하는 스크립트를 정리하였습니다.
+# Newman (Postman) module를 사용한 API 테스트 자동화시 자주 사용하는 스크립트.
 - response body 저장하기
 var data = JSON.parse(responseBody)
 pm.environment.set("{{environment_name}}", data.{{parmeter_name}})
