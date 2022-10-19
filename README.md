@@ -21,4 +21,4 @@
 
 # Flask
 
-flask api 샘플코드가 
+flask api 샘플코드가 작성되어 있습니다.
