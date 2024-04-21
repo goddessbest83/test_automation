@@ -1,5 +1,4 @@
 import unittest
-import yaml
 import json
 
 from appium.webdriver.appium_service import AppiumService
@@ -11,19 +10,13 @@ from android_test_automation.test_cases.android_test import AutomationTesting
 class AndroidTestAutomation(unittest.TestCase):
 
     def setUp(self):
-        # yaml을 사용할 경우
-        # with open('../../info.yaml') as ym:
-        #     self.conf = yaml.load(ym, Loader=yaml.FullLoader)
-        # self.account_id = self.conf['account_email']
-        # json을 사용할 경우
-        # self.conf = user_data.json()
 
         # Appium Service
         self.appium = AppiumService()
-        self.appium.start(args=['-p', '4723', '--chromedriver-executable', '{chromedriver path}'])
+        self.appium.start(args=['-p', '4723', '--base-path', '/wd/hub', '--default-capabilities', '{"appium:chromedriverExecutable": "/usr/local/bin/chromedriver"}'])
 
         # webdriver
-        self.wd, self.and_cap = and_setup.setup()
+        self.wd, self.and_cap = and_setup.and_setup()
         self.wd.implicitly_wait(5)
 
     def tearDown(self):
